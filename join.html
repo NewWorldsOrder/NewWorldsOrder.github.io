@@ -62,8 +62,23 @@
             padding: 35px 45px;
             margin-bottom: 30px;
             border-radius: 14px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.08); /* slightly stronger subtle shadow */
+            box-shadow: 0 10px 28px rgba(0,0,0,0.10); /* slightly darker shadow */
+            position: relative;
+            overflow: hidden;
             transition: transform 0.2s;
+        }
+
+        /* subtle top highlight/gloss effect */
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 15px;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0));
+            border-top-left-radius: 14px;
+            border-top-right-radius: 14px;
         }
 
         .card:hover {
@@ -170,4 +185,5 @@
     </div>
 </body>
 </html>
+
 
