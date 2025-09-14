@@ -1,20 +1,99 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>New Worlds Order</title>
+<meta charset="UTF-8">
+<title>New Worlds Order</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #273e9c; /* EU-blue background */
+    color: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* Container for all cards */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* Individual page cards */
+.card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #333;
+}
+
+a {
+    color: #0071e3;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #005bb5;
+}
+</style>
 </head>
 <body>
-    <h1>Welcome to New Worlds Order</h1>
-    <p>This is the homepage of our NationStates region.</p>
 
-    <h2>Explore Our Region</h2>
-    <ul>
-        <li><a href="history.html">History</a></li>
-        <li><a href="government.html">Government / Power</a></li>
-        <li><a href="culture.html">Culture</a></li>
-        <li><a href="join.html">Join</a></li>
-        <li><a href="faq.html">FAQ / Rules</a></li>
-    </ul>
+<h1 style="margin-bottom:30px;">Welcome to New Worlds Order</h1>
+<p style="margin-bottom:50px; text-align:center; max-width:600px;">Discover the history, culture, and governance of our region. Click any section to explore further.</p>
+
+<div class="grid-container">
+    <div class="card">
+        <h2><a href="history.html">History</a></h2>
+        <p>Learn the origins and foundation of the New Worlds Order.</p>
+    </div>
+
+    <div class="card">
+        <h2><a href="government.html">Government</a></h2>
+        <p>Explore the power structure and ranks within our region.</p>
+    </div>
+
+    <div class="card">
+        <h2><a href="culture.html">Culture</a></h2>
+        <p>Understand our morals, traditions, and regional values.</p>
+    </div>
+
+    <div class="card">
+        <h2><a href="join.html">Join</a></h2>
+        <p>Find out how to become part of our community and participate.</p>
+    </div>
+
+    <div class="card">
+        <h2><a href="faq.html">FAQ / Rules</a></h2>
+        <p>Read the rules, policies, and answers to common questions.</p>
+    </div>
+</div>
+
 </body>
 </html>
