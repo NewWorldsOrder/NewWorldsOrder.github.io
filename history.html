@@ -1,13 +1,168 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>History - New Worlds Order</title>
+<meta charset="UTF-8">
+<title>History - New Worlds Order</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #273e9c; /* EU-blue background */
+    color: #111;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    position: relative;
+}
+
+/* Side panels yellow with subtle vertical slits */
+.side-panel {
+    position: fixed;
+    top: 0;
+    width: 70px;
+    height: 100%;
+    background-color: #d9ae16;
+    background-image: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.05) 0,
+        rgba(255,255,255,0.05) 60px,
+        transparent 60px,
+        transparent 80px
+    );
+    border-radius: 0 12px 12px 0;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.2);
+    z-index: 0;
+}
+.side-panel.left { left:20px; border-radius:12px 0 0 12px; }
+.side-panel.right { right:20px; border-radius:12px 0 0 12px; }
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Card with white background */
+.card {
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.15);
+    padding: 35px 45px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0));
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+h1 { font-size:3rem; margin-bottom:20px; font-weight:600; }
+h2 { font-size:2rem; margin-top:20px; margin-bottom:15px; font-weight:500; }
+p { font-size:1.1rem; margin-bottom:15px; }
+ul { list-style: disc; padding-left:20px; text-align:left; margin-bottom:15px; }
+li { margin-bottom:10px; }
+
+a { color:#0071e3; text-decoration:none; transition: color 0.2s; }
+a:hover { color:#005bb5; }
+
+.back-home {
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 24px;
+    border:1px solid #111;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:500;
+    background-color:#111;
+    transition: all 0.2s;
+}
+
+.back-home:hover {
+    background-color:#111;
+    color:#fff;
+    border-color:#111;
+}
+
+@media (max-width:1000px){ .side-panel{display:none;} }
+</style>
 </head>
 <body>
-    <h1>Region History</h1>
-    <p>Write your region’s history here.</p>
-    <a href="index.html">Back to Homepage</a>
+    <div class="side-panel left"></div>
+    <div class="side-panel right"></div>
+
+    <div class="container">
+
+        <!-- Card 1: Origins -->
+        <div class="card" style="position:relative;">
+            <img src="41vVm2nlnmL._UF894,1000_QL80_.jpg" alt="Region Flag" style="position:absolute; top:30px; right:30px; width:80px; height:auto;">
+            <h1>Origins of the New Worlds Order</h1>
+            <p>The New Worlds Order was not born from peace, but from betrayal and defiance. Years ago, an elite military unit, disillusioned by the endless cycle of war and the corruption of failing governments, broke away from the Old World’s central command. Orders served only the powerful, enriching a select few while nations suffered. This unit refused to obey commands that betrayed honor and duty, choosing instead to forge a new path.</p>
+            <p>In secret, these veterans and strategists swore to build a society based on discipline, loyalty, and strength—a society where every action served the greater good of the community rather than self-interest.</p>
+        </div>
+
+        <!-- Card 2: Founding -->
+        <div class="card" style="position:relative;">
+            <img src="41vVm2nlnmL._UF894,1000_QL80_.jpg" alt="Region Flag" style="position:absolute; top:30px; right:30px; width:80px; height:auto;">
+            <h2>Founding of NWO</h2>
+            <p>Led by high-ranking commanders and experienced tacticians, the group established a new bastion: the New Worlds Order. Unlike traditional regions, the NWO combined military precision with civic responsibility. Every nation that joined became part of an organized structure that functioned as both a government and an army.</p>
+            <p>The founding leaders prioritized cohesion and order. Chaos, indecision, and weakness were not tolerated. Citizens were expected to commit fully to the vision, but in return, they gained the security of a structured, purposeful community.</p>
+        </div>
+
+        <!-- Card 3: Early Challenges -->
+        <div class="card" style="position:relative;">
+            <img src="41vVm2nlnmL._UF894,1000_QL80_.jpg" alt="Region Flag" style="position:absolute; top:30px; right:30px; width:80px; height:auto;">
+            <h2>Early Challenges</h2>
+            <p>The early days of the NWO were fraught with challenges. Rogue factions from the Old World attempted to infiltrate and destabilize the fledgling region. Supply lines, communication networks, and borders had to be established quickly to maintain control and ensure survival.</p>
+            <p>Despite these trials, the founders persisted, relying on strict hierarchy, strategic planning, and the loyalty of their members. Each crisis strengthened the region’s identity, proving that a society built on discipline and unity could endure where the Old World had failed.</p>
+        </div>
+
+        <!-- Card 4: Governance Structure -->
+        <div class="card" style="position:relative;">
+            <img src="41vVm2nlnmL._UF894,1000_QL80_.jpg" alt="Region Flag" style="position:absolute; top:30px; right:30px; width:80px; height:auto;">
+            <h2>Establishing Governance</h2>
+            <p>From its inception, the NWO implemented a clear governance structure. Power Positions were established to maintain order and delegate responsibilities efficiently. Leadership was divided into strategic, administrative, and operational branches, ensuring that military, diplomatic, and civic functions were managed simultaneously.</p>
+            <p>Supreme leaders set the direction, while subordinate officers executed policies with precision. Every citizen had a role, and every contribution mattered. This structure allowed the region to grow steadily, attracting nations that valued order and accountability.</p>
+        </div>
+
+        <!-- Card 5: Culture and Loyalty -->
+        <div class="card" style="position:relative;">
+            <img src="41vVm2nlnmL._UF894,1000_QL80_.jpg" alt="Region Flag" style="position:absolute; top:30px; right:30px; width:80px; height:auto;">
+            <h2>Building Culture and Loyalty</h2>
+            <p>Even as the NWO expanded, the founders emphasized the importance of culture. Respect, loyalty, and discipline were not just rules—they became the ethos of the region. Members were encouraged to participate in shaping the identity of the NWO, from military campaigns to regional projects and events.</p>
+            <p>This sense of belonging created strong bonds among citizens, reinforcing unity and dedication. Betrayal, corruption, and apathy were actively discouraged, ensuring that only those who embraced the vision of the NWO could thrive.</p>
+        </div>
+
+        <!-- Card 6: Legacy -->
+        <div class="card" style="position:relative;">
+            <img src="41vVm2nlnmL._UF894,1000_QL80_.jpg" alt="Region Flag" style="position:absolute; top:30px; right:30px; width:80px; height:auto;">
+            <h2>Legacy of the Founders</h2>
+            <p>Today, the New Worlds Order stands as a testament to its founders’ vision: a region where strategy, loyalty, and community converge. From the ashes of the Old World, the NWO emerged not only as a region but as a living, structured society.</p>
+            <p>Its history is a story of defiance, courage, and meticulous planning—a reminder that nations can rise from chaos when guided by discipline and a shared purpose. Every member of the NWO inherits this legacy, becoming part of a continuum that honors the past while shaping the future.</p>
+        </div>
+
+        <a class="back-home" href="index.html">Back to Homepage</a>
+    </div>
 </body>
 </html>
-
