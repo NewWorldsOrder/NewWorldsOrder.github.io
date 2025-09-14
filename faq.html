@@ -1,13 +1,162 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>FAQ / Rules - New Worlds Order</title>
+<meta charset="UTF-8">
+<title>FAQ & Rules - New Worlds Order</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #273e9c; /* EU-blue background */
+    color: #111;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    position: relative;
+}
+
+/* Side panels yellow with subtle vertical slits */
+.side-panel {
+    position: fixed;
+    top: 0;
+    width: 70px;
+    height: 100%;
+    background-color: #d9ae16;
+    background-image: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.05) 0,
+        rgba(255,255,255,0.05) 60px,
+        transparent 60px,
+        transparent 80px
+    );
+    border-radius: 0 12px 12px 0;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.2);
+    z-index: 0;
+}
+.side-panel.left { left:20px; border-radius:12px 0 0 12px; }
+.side-panel.right { right:20px; border-radius:12px 0 0 12px; }
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Card with white background */
+.card {
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.15);
+    padding: 35px 45px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0));
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+h1 { font-size:3rem; margin-bottom:20px; font-weight:600; }
+h2 { font-size:2rem; margin-top:20px; margin-bottom:15px; font-weight:500; }
+p { font-size:1.1rem; margin-bottom:15px; }
+ul { list-style: disc; padding-left:20px; text-align:left; margin-bottom:15px; }
+li { margin-bottom:10px; }
+
+a { color:#0071e3; text-decoration:none; transition: color 0.2s; }
+a:hover { color:#005bb5; }
+
+.back-home {
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 24px;
+    border:1px solid #111;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:500;
+    background-color:#111;
+    color:#fff;
+    transition: all 0.2s;
+}
+
+.back-home:hover {
+    background-color:#333;
+    border-color:#333;
+}
+
+@media (max-width:1000px){ .side-panel{display:none;} }
+</style>
 </head>
 <body>
-    <h1>FAQ / Rules</h1>
-    <p>List common questions and rules for the region.</p>
-    <a href="index.html">Back to Homepage</a>
+    <div class="side-panel left"></div>
+    <div class="side-panel right"></div>
+
+    <div class="container">
+        <div class="card" style="position:relative;">
+            <img src="41vVm2nlnmL._UF894,1000_QL80_.jpg" alt="Region Flag" style="position:absolute; top:30px; right:30px; width:80px; height:auto;">
+            <h1>FAQ & Rules</h1>
+            <p>Welcome to the central hub for all questions, rules, and important info about New Worlds Order. Here you’ll find how the region operates, how members interact, and the key policies that keep our community running smoothly.</p>
+            <p style="font-weight:bold; color:#d9ae16;">Important:</p>
+            <p style="font-weight:bold;">All rules, regulations, and content on this website can only be modified through a majority poll vote in the region. Changes without a vote are invalid.</p>
+        </div>
+
+        <div class="card" style="position:relative;">
+            <img src="41vVm2nlnmL._UF894,1000_QL80_.jpg" alt="Region Flag" style="position:absolute; top:30px; right:30px; width:80px; height:auto;">
+            <h2>Rules of Conduct</h2>
+            <ul>
+                <li>Respect other nations — debates are encouraged, personal attacks are forbidden.</li>
+                <li>Keep roleplay immersive, fun, and engaging.</li>
+                <li>Obey the structure of the government; hierarchy exists for organization.</li>
+                <li>No spamming or abusing the RMB or regional communication channels.</li>
+                <li>Harassment, griefing, or attempts to destabilize the region will result in removal.</li>
+            </ul>
+        </div>
+
+        <div class="card" style="position:relative;">
+            <img src="41vVm2nlnmL._UF894,1000_QL80_.jpg" alt="Region Flag" style="position:absolute; top:30px; right:30px; width:80px; height:auto;">
+            <h2>Frequently Asked Questions</h2>
+            <ul>
+                <li><strong>How do I join the government?</strong> → Contribute actively, stay involved, and you may be noticed for promotion.</li>
+                <li><strong>Do I have to roleplay?</strong> → Roleplay is optional but encouraged for a richer experience.</li>
+                <li><strong>Can I form alliances with other nations?</strong> → Yes, but consult leadership first.</li>
+                <li><strong>How do I move up ranks?</strong> → Active participation, loyalty, and consistent contributions.</li>
+                <li><strong>What happens if I break the rules?</strong> → Violations are warned first; repeat offenses may lead to removal.</li>
+            </ul>
+        </div>
+
+        <div class="card" style="position:relative;">
+            <img src="41vVm2nlnmL._UF894,1000_QL80_.jpg" alt="Region Flag" style="position:absolute; top:30px; right:30px; width:80px; height:auto;">
+            <h2>Contributors & Thanks</h2>
+            <ul>
+                <li><a href="https://www.nationstates.net/nation=cratens">Cratens</a> – Founder & Lead Strategist</li>
+                <li><a href="https://www.nationstates.net/nation=big_cuba">Big Cuba</a> – Co-Founder & Co-Strategist</li>
+                <li><a href="https://www.nationstates.net/nation=order_avaritiae">Order Avaritiae</a> – Helped with structuring and organizing the region’s buildup</li>
+                <li><a href="https://www.nationstates.net/nation=randtan">Randtan</a> – First member to join</li>
+            </ul>
+        </div>
+
+        <a class="back-home" href="index.html">Back to Homepage</a>
+    </div>
 </body>
 </html>
-
