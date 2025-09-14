@@ -4,111 +4,110 @@
 <meta charset="UTF-8">
 <title>Join - New Worlds Order</title>
 <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        background: #003399; /* EU-blue background */
-        color: #111;
-        line-height: 1.6;
-        display: flex;
-        justify-content: center;
-        padding: 50px 20px;
-        position: relative;
-    }
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #003399; /* EU blue */
+    color: #111;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    position: relative;
+}
 
-    /* Side panels black with subtle slits */
-    .side-panel {
-        position: fixed;
-        top: 0;
-        width: 70px;
-        height: 100%;
-        background-color: #000;
-        background-image: repeating-linear-gradient(
-            to bottom,
-            rgba(255,255,255,0.05) 0,
-            rgba(255,255,255,0.05) 70px,
-            transparent 70px,
-            transparent 80px
-        );
-        border-radius: 0 12px 12px 0;
-        box-shadow: 2px 0 12px rgba(0,0,0,0.2);
-        z-index: 0;
-    }
+/* Side panels black with subtle slits/gaps */
+.side-panel {
+    position: fixed;
+    top: 0;
+    width: 70px;
+    height: 100%;
+    background-color: #000;
+    background-image: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.05) 0,
+        rgba(255,255,255,0.05) 60px,
+        transparent 60px,
+        transparent 80px
+    );
+    border-radius: 0 12px 12px 0;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.2);
+    z-index: 0;
+}
+.side-panel.left { left:20px; border-radius:12px 0 0 12px; }
+.side-panel.right { right:20px; border-radius:12px 0 0 12px; }
 
-    .side-panel.left { left:20px; border-radius:12px 0 0 12px; }
-    .side-panel.right { right:20px; border-radius:12px 0 0 12px; }
+.container {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
 
-    .container {
-        max-width: 800px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        align-items: center;
-        position: relative;
-        z-index: 1;
-    }
+.card {
+    background-color: #fff;
+    padding: 35px 45px;
+    border-radius: 14px;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    /* EU yellow stars watermark behind text */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="30" fill="none" stroke="rgba(255, 215, 0, 0.1)" stroke-width="2"/><circle cx="50" cy="50" r="28" fill="none" stroke="rgba(255, 215, 0, 0.1)" stroke-width="2"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80px 80px;
+}
 
-    .card {
-        background-color: #fff;
-        padding: 35px 45px;
-        border-radius: 14px;
-        box-shadow: 0 14px 40px rgba(0,0,0,0.15);
-        position: relative;
-        overflow: hidden;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        width: 100%;
-        /* EU stars watermark */
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="30" fill="none" stroke="rgba(255,255,0,0.05)" stroke-width="2"/><circle cx="50" cy="50" r="28" fill="none" stroke="rgba(255,255,0,0.05)" stroke-width="2"/></svg>');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 80px 80px;
-    }
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0));
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
 
-    .card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 15px;
-        background: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0));
-        border-top-left-radius: 14px;
-        border-top-right-radius: 14px;
-    }
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
 
-    .card:hover {
-        transform: scale(1.05);
-        box-shadow: 0 20px 60px rgba(0,0,0,0.2);
-    }
+h1 { font-size:3rem; margin-bottom:20px; font-weight:600; }
+h2 { font-size:2rem; margin-top:20px; margin-bottom:15px; font-weight:500; }
+p { font-size:1.1rem; margin-bottom:15px; }
+ul { list-style: disc; padding-left:20px; text-align:left; margin-bottom:15px; }
+li { margin-bottom:10px; }
 
-    h1 { font-size:3rem; margin-bottom:20px; font-weight:600; }
-    h2 { font-size:2rem; margin-top:20px; margin-bottom:15px; font-weight:500; }
-    p { font-size:1.1rem; margin-bottom:15px; }
-    ul { list-style: disc; padding-left:20px; text-align:left; margin-bottom:15px; }
-    li { margin-bottom:10px; }
+a { color:#0071e3; text-decoration:none; transition: color 0.2s; }
+a:hover { color:#005bb5; }
 
-    a { color:#0071e3; text-decoration:none; transition: color 0.2s; }
-    a:hover { color:#005bb5; }
+.back-home {
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 24px;
+    border:1px solid #111;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:500;
+    transition: all 0.2s;
+}
 
-    .back-home {
-        display:inline-block;
-        margin-top:20px;
-        padding:12px 24px;
-        border:1px solid #111;
-        border-radius:6px;
-        text-decoration:none;
-        font-weight:500;
-        transition: all 0.2s;
-    }
+.back-home:hover {
+    background-color:#111;
+    color:#fff;
+    border-color:#111;
+}
 
-    .back-home:hover {
-        background-color:#111;
-        color:#fff;
-        border-color:#111;
-    }
-
-    @media (max-width:1000px){ .side-panel{display:none;} }
+@media (max-width:1000px){ .side-panel{display:none;} }
 </style>
 </head>
 <body>
