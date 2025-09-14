@@ -15,7 +15,30 @@ body {
     align-items: center;
     min-height: 100vh;
     padding: 40px 20px;
+    position: relative;
 }
+
+/* Side pillars */
+.side-pillar {
+    position: fixed;
+    top: 0;
+    width: 20px;
+    height: 100%;
+    background-color: #111;
+    z-index: 0;
+    border-radius: 5px;
+    box-shadow: 1px 0 6px rgba(0,0,0,0.3);
+    background-image: repeating-linear-gradient(
+        to bottom,
+        #111 0,
+        #111 80px,
+        transparent 80px,
+        transparent 100px
+    );
+}
+
+.side-pillar.left { left: 30px; }
+.side-pillar.right { right: 30px; }
 
 /* Welcome box */
 .welcome-box {
@@ -27,6 +50,8 @@ body {
     max-width: 800px;
     margin-bottom: 50px;
     box-shadow: 0 14px 40px rgba(0,0,0,0.15);
+    position: relative;
+    z-index: 1;
 }
 
 .welcome-box h1 { font-size:3rem; margin-bottom:15px; }
@@ -39,6 +64,8 @@ body {
     gap: 30px;
     width: 100%;
     max-width: 1000px;
+    position: relative;
+    z-index: 1;
 }
 
 /* Adjust for 3 cards in second row */
@@ -83,9 +110,16 @@ a {
 a:hover {
     color: #005bb5;
 }
+
+@media (max-width:1000px){
+    .side-pillar { display:none; }
+}
 </style>
 </head>
 <body>
+
+<div class="side-pillar left"></div>
+<div class="side-pillar right"></div>
 
 <div class="welcome-box">
     <h1>Welcome to New Worlds Order</h1>
