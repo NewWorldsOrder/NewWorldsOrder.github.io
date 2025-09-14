@@ -13,18 +13,40 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     min-height: 100vh;
     padding: 40px 20px;
 }
 
-/* Container for all cards */
+/* Welcome box */
+.welcome-box {
+    background: #d9ae16;
+    color: #111;
+    border-radius: 14px;
+    padding: 30px 40px;
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 50px;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.15);
+}
+
+.welcome-box h1 { font-size:3rem; margin-bottom:15px; }
+.welcome-box p { font-size:1.2rem; }
+
+/* Container for pyramid cards */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     width: 100%;
     max-width: 1000px;
+}
+
+/* Adjust for 3 cards in second row */
+.grid-container .second-row {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
 /* Individual page cards */
@@ -65,10 +87,13 @@ a:hover {
 </head>
 <body>
 
-<h1 style="margin-bottom:30px;">Welcome to New Worlds Order</h1>
-<p style="margin-bottom:50px; text-align:center; max-width:600px;">Discover the history, culture, and governance of our region. Click any section to explore further.</p>
+<div class="welcome-box">
+    <h1>Welcome to New Worlds Order</h1>
+    <p>Discover the history, culture, and governance of our region. Click any section to explore further.</p>
+</div>
 
 <div class="grid-container">
+    <!-- Top row: 2 cards -->
     <div class="card">
         <h2><a href="history.html">History</a></h2>
         <p>Learn the origins and foundation of the New Worlds Order.</p>
@@ -79,19 +104,22 @@ a:hover {
         <p>Explore the power structure and ranks within our region.</p>
     </div>
 
-    <div class="card">
-        <h2><a href="culture.html">Culture</a></h2>
-        <p>Understand our morals, traditions, and regional values.</p>
-    </div>
+    <!-- Bottom row: 3 cards -->
+    <div class="second-row">
+        <div class="card">
+            <h2><a href="culture.html">Culture</a></h2>
+            <p>Understand our morals, traditions, and regional values.</p>
+        </div>
 
-    <div class="card">
-        <h2><a href="join.html">Join</a></h2>
-        <p>Find out how to become part of our community and participate.</p>
-    </div>
+        <div class="card">
+            <h2><a href="join.html">Join</a></h2>
+            <p>Find out how to become part of our community and participate.</p>
+        </div>
 
-    <div class="card">
-        <h2><a href="faq.html">FAQ / Rules</a></h2>
-        <p>Read the rules, policies, and answers to common questions.</p>
+        <div class="card">
+            <h2><a href="faq.html">FAQ / Rules</a></h2>
+            <p>Read the rules, policies, and answers to common questions.</p>
+        </div>
     </div>
 </div>
 
