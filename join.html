@@ -12,7 +12,7 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: #e6e6ea; /* slightly darker than before */
+            background-color: #e6e6ea;
             color: #111111;
             line-height: 1.6;
             display: flex;
@@ -21,7 +21,6 @@
             position: relative;
         }
 
-        /* Sleek side panels with fewer gaps */
         .side-panel {
             position: fixed;
             top: 0;
@@ -52,7 +51,10 @@
         .container {
             max-width: 800px;
             width: 100%;
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 30px; /* space between cards */
+            align-items: center;
             position: relative;
             z-index: 1;
         }
@@ -60,15 +62,14 @@
         .card {
             background-color: #ffffff;
             padding: 35px 45px;
-            margin-bottom: 30px;
             border-radius: 14px;
-            box-shadow: 0 12px 36px rgba(0,0,0,0.12); /* slightly stronger smooth shadow */
+            box-shadow: 0 14px 40px rgba(0,0,0,0.15); /* deeper base shadow */
             position: relative;
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 100%;
         }
 
-        /* subtle top highlight/gloss effect */
         .card::before {
             content: "";
             position: absolute;
@@ -82,8 +83,8 @@
         }
 
         .card:hover {
-            transform: translateY(-2px) scale(1.02); /* subtle lift and tiny enlargement */
-            box-shadow: 0 14px 40px rgba(0,0,0,0.14); /* stronger smooth shadow on hover */
+            transform: scale(1.05); /* bigger enlargement */
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2); /* expanded shadow on hover */
         }
 
         h1 {
@@ -144,7 +145,7 @@
 
         @media (max-width: 1000px) {
             .side-panel {
-                display: none; /* hide side panels on small screens */
+                display: none;
             }
         }
     </style>
