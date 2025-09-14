@@ -49,7 +49,7 @@ body {
     z-index: 1;
 }
 
-/* Card with subtle yellow gradient and faint star circle */
+/* Card with subtle yellow gradient */
 .card {
     background: linear-gradient(135deg, rgba(255,215,0,0.15) 0%, rgba(255,215,0,0.05) 100%);
     border-radius: 14px;
@@ -59,19 +59,6 @@ body {
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
-}
-
-.card::after {
-    content: '';
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    width: 80px;
-    height: 80px;
-    background: url('eu-stars.png') no-repeat center center;
-    background-size: contain;
-    opacity: 0.1;
-    pointer-events: none;
 }
 
 .card::before {
