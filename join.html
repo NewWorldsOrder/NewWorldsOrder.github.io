@@ -12,18 +12,46 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: #f5f5f7; /* soft, clean Apple-like background */
+            background-color: #e8e8e8; /* light gray background */
             color: #111111;
             line-height: 1.6;
             display: flex;
             justify-content: center;
             padding: 50px 20px;
+            position: relative;
+        }
+
+        /* Decorative sidebars */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            width: 60px;
+            height: 100%;
+            background: repeating-linear-gradient(
+                to bottom,
+                #ffffff,
+                #ffffff 30px,
+                #e8e8e8 30px,
+                #e8e8e8 40px
+            );
+            box-shadow: 2px 0 6px rgba(0,0,0,0.05);
+            z-index: 0;
+        }
+
+        .sidebar.left {
+            left: 0;
+        }
+
+        .sidebar.right {
+            right: 0;
         }
 
         .container {
             max-width: 800px;
             width: 100%;
             text-align: center;
+            position: relative;
+            z-index: 1;
         }
 
         .card {
@@ -89,9 +117,18 @@
             color: #fff;
             border-color: #111;
         }
+
+        @media (max-width: 900px) {
+            .sidebar {
+                display: none; /* remove sidebars on small screens */
+            }
+        }
     </style>
 </head>
 <body>
+    <div class="sidebar left"></div>
+    <div class="sidebar right"></div>
+
     <div class="container">
         <div class="card">
             <h1>Join New Worlds Order</h1>
