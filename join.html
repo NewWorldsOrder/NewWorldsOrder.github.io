@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Join - New Worlds Order</title>
     <style>
-        /* General reset */
         * {
             margin: 0;
             padding: 0;
@@ -13,12 +12,26 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: #ffffff;
+            background-color: #f5f5f7; /* soft, clean Apple-like background */
             color: #111111;
             line-height: 1.6;
-            padding: 40px;
-            max-width: 900px;
-            margin: auto;
+            display: flex;
+            justify-content: center;
+            padding: 50px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .card {
+            background-color: #ffffff;
+            padding: 30px 40px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
         }
 
         h1 {
@@ -29,20 +42,21 @@
 
         h2 {
             font-size: 2rem;
-            margin-top: 30px;
+            margin-top: 20px;
             margin-bottom: 15px;
             font-weight: 500;
         }
 
         p {
-            margin-bottom: 20px;
             font-size: 1.1rem;
+            margin-bottom: 15px;
         }
 
         ul {
-            margin-bottom: 20px;
             list-style: disc;
             padding-left: 20px;
+            text-align: left;
+            margin-bottom: 15px;
         }
 
         li {
@@ -61,12 +75,13 @@
 
         .back-home {
             display: inline-block;
-            margin-top: 30px;
-            padding: 10px 20px;
+            margin-top: 20px;
+            padding: 12px 24px;
             border: 1px solid #111;
             border-radius: 6px;
             text-decoration: none;
             font-weight: 500;
+            transition: all 0.2s;
         }
 
         .back-home:hover {
@@ -77,32 +92,37 @@
     </style>
 </head>
 <body>
-    <h1>Join New Worlds Order</h1>
+    <div class="container">
+        <div class="card">
+            <h1>Join New Worlds Order</h1>
+            <p>Looking for a region that’s more than just a list of nations? New Worlds Order is where creativity, strategy, and community collide. Here, every player has a voice, every idea counts, and we’re building something that’s more than a game—it’s an experience.</p>
+        </div>
 
-    <p>Looking for a region that’s more than just a list of nations? New Worlds Order is where creativity, strategy, and community collide. Here, every player has a voice, every idea counts, and we’re building something that’s more than a game—it’s an experience.</p>
+        <div class="card">
+            <h2>Why You Should Join</h2>
+            <p>Joining us isn’t just about adding your nation—it’s about being part of a community that’s active, organized, and full of opportunities. Whether you love shaping history, taking part in regional decisions, or just want a place where your nation matters, this is the region for you.</p>
+            <ul>
+                <li>Get involved in shaping our region’s unique history and events.</li>
+                <li>Interact with a tight-knit community that’s welcoming to new and experienced players alike.</li>
+                <li>Enjoy an organized government that’s fair, clear, and fun to participate in.</li>
+                <li>Take part in projects and challenges that give your nation a real impact.</li>
+            </ul>
+        </div>
 
-    <h2>Why You Should Join</h2>
-    <p>Joining us isn’t just about adding your nation—it’s about being part of a community that’s active, organized, and full of opportunities. Whether you love shaping history, taking part in regional decisions, or just want a place where your nation matters, this is the region for you.</p>
+        <div class="card">
+            <h2>What Makes Us Different</h2>
+            <p>New Worlds Order isn’t your run-of-the-mill region. Here’s what sets us apart:</p>
+            <ul>
+                <li>Every member’s contribution matters—we’re collaborative, not hierarchical.</li>
+                <li>Our culture is dynamic and shaped by our players, not by empty rules.</li>
+                <li>We maintain a fun and welcoming atmosphere while keeping our structure solid.</li>
+                <li>Exciting events, unique projects, and ongoing storylines make our region alive.</li>
+            </ul>
+            <p>Curious? Ready to make your mark? Head over to our <a href="https://www.nationstates.net/region=new_worlds_order">NationStates region page</a> and join the adventure. Your nation deserves a place where it matters—come be part of New Worlds Order!</p>
+        </div>
 
-    <ul>
-        <li>Get involved in shaping our region’s unique history and events.</li>
-        <li>Interact with a tight-knit community that’s welcoming to new and experienced players alike.</li>
-        <li>Enjoy an organized government that’s fair, clear, and fun to participate in.</li>
-        <li>Take part in projects and challenges that give your nation a real impact.</li>
-    </ul>
-
-    <h2>What Makes Us Different</h2>
-    <p>New Worlds Order isn’t your run-of-the-mill region. Here’s what sets us apart:</p>
-    <ul>
-        <li>Every member’s contribution matters—we’re collaborative, not hierarchical.</li>
-        <li>Our culture is dynamic and shaped by our players, not by empty rules.</li>
-        <li>We maintain a fun and welcoming atmosphere while keeping our structure solid.</li>
-        <li>Exciting events, unique projects, and ongoing storylines make our region alive.</li>
-    </ul>
-
-    <p>Curious? Ready to make your mark? Head over to our <a href="https://www.nationstates.net/region=new_worlds_order">NationStates region page</a> and join the adventure. Your nation deserves a place where it matters—come be part of New Worlds Order!</p>
-
-    <a class="back-home" href="index.html">Back to Homepage</a>
+        <a class="back-home" href="index.html">Back to Homepage</a>
+    </div>
 </body>
 </html>
 
