@@ -21,13 +21,19 @@
             position: relative;
         }
 
-        /* Sleek side panels */
+        /* Sleek side panels with subtle gaps */
         .side-panel {
             position: fixed;
             top: 0;
             width: 70px;
             height: 100%;
-            background: linear-gradient(to bottom, #ffffff 0%, #f9f9fa 100%);
+            background: repeating-linear-gradient(
+                to bottom,
+                #ffffff 0,
+                #ffffff 45px,
+                transparent 45px,
+                transparent 50px
+            );
             border-radius: 0 12px 12px 0;
             box-shadow: 2px 0 12px rgba(0,0,0,0.05);
             z-index: 0;
@@ -40,6 +46,7 @@
 
         .side-panel.right {
             right: 20px;
+            border-radius: 12px 0 0 12px;
         }
 
         .container {
@@ -163,3 +170,4 @@
     </div>
 </body>
 </html>
+
